@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .nested-table {
+            width: 100%;
+            margin: -2px;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <!-- Header Row -->
+    <tr>
+        <th>Header column 1</th>
+        <th>Header column 2</th>
+        <th>Header column 3</th>
+        <th>Header column 4</th>
+    </tr>
+    
+    <!-- Row 2 -->
+    <tr>
+        <td>Row 2 - Item 1</td>
+        <td>Row 2 - Item 2</td>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <td colspan="2">Nested Table 1</td>
+                </tr>
+                <tr>
+                    <td>Row 1 Header Item</td>
+                    <td>Row 2 Header Item</td>
+                </tr>
+            </table>
+        </td>
+        <td>Row 2 - Item 4<br>A second line</td>
+    </tr>
+    
+    <!-- Row 3 -->
+    <tr>
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <td colspan="2">Nested Table 2</td>
+                </tr>
+                <tr>
+                    <td>Row 4 - Item 1</td>
+                    <td>Row 4 - Item 2</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Row 4 - Item 3</td>
+                </tr>
+            </table>
+        </td>
+        <td>Row 3 - Item 2</td>
+        <td>
+            <table class="nested-table">
+                <tr><th>Row 1 Header Item</th></tr>
+                <tr><th>Row 2 Header Item</th></tr>
+                <tr><th>Row 3 Header Item</th></tr>
+                <tr><td>Row 3 - Item 3</td></tr>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    
+    <!-- Additional Rows -->
+    <tr>
+        <td colspan="4">Row 5 - Last row of outer table</td>
+    </tr>
+</table>
+
+</body>
+</html>
